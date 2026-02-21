@@ -17,6 +17,10 @@ function validateEmail(email) {
   return regex.test(email);
 }
 
+function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
+}
+
 function slugify(text) {
   return text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
 }
