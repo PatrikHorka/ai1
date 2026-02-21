@@ -1,7 +1,8 @@
 {
   "apiUrl": "https://api.example.com",
-  "timeout": 8000,
-  "retries": 5,
+  "timeout": 10000,
+  "retries": 3,
+  "debug": false,
   "features": {
     "authentication": true,
     "logging": true,
