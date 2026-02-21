@@ -21,6 +21,11 @@ function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
 
+function capitalize(str) {
+  if (!str) return '';
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 function slugify(text) {
   return text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
 }
