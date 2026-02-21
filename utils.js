@@ -7,9 +7,9 @@ function calculateAverage(numbers) {
   return calculateSum(numbers) / numbers.length;
 }
 
-function formatDate(date) {
+function formatDate(date, locale = 'cs-CZ') {
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  return date.toLocaleDateString('en-US', options);
+  return date.toLocaleDateString(locale, options);
 }
 
 function validateEmail(email) {
@@ -26,8 +26,13 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-function slugify(text) {
-  return text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+function slugify(text, separator = '-') {
+  return text.toLowerCase().replace(/\s+/g, separator).replace(/[^\w-]/g, '');
+}
+
+function truncate(str, maxLength) {
+  if (str.length <= maxLength) return str;
+  return str.slice(0, maxLength) + '…';
 }
 
 module.exports = { calculateSum, calculateAverage, formatDate, validateEmail, slugify };
