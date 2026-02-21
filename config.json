@@ -2,11 +2,13 @@
   "apiUrl": "https://api.example.com",
   "timeout": 10000,
   "retries": 3,
-  "debug": false,
+  "debug": true,
+  "maxConnections": 20,
   "features": {
     "authentication": true,
-    "logging": true,
+    "logging": false,
     "caching": true,
-    "rateLimiting": true
+    "rateLimiting": true,
+    "analytics": false
   }
 }
