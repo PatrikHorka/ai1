@@ -2,6 +2,14 @@ function calculateSum(numbers) {
   return numbers.reduce((sum, num) => sum + num, 0);
 }
 
+function calculateMin(numbers) {
+  return numbers.length === 0 ? null : Math.min(...numbers);
+}
+
+function calculateMax(numbers) {
+  return numbers.length === 0 ? null : Math.max(...numbers);
+}
+
 function calculateAverage(numbers) {
   if (numbers.length === 0) return 0;
   return calculateSum(numbers) / numbers.length;
