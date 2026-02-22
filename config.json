@@ -2,7 +2,8 @@
   "apiUrl": "https://api.example.com",
   "timeout": 10000,
   "retries": 3,
-  "debug": true,
+  "debug": false,
+  "version": "2.0.0",
   "maxConnections": 20,
   "features": {
     "authentication": true,
